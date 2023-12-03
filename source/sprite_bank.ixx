@@ -2,7 +2,7 @@ module;
 
 #include <cassert>
 
-export module stk.sprite_bank;
+export module stk.sprite;
 
 import <SFML/Graphics.hpp>;
 import std.core;
