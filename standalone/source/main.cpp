@@ -1,10 +1,9 @@
-import stk.tpl;
+import stk.sprite_bank;
 
 using namespace stk;
 
 int main()
 {
-	c_template tpl;
-	tpl.go_template();
+	c_sprite_bank sprite_bank;
 	return 0;
 }
