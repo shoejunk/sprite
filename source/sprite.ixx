@@ -34,7 +34,7 @@ namespace stk
 				}
 				catch (...)
 				{
-					errorln("Failed to create sprite from texture: ", image_path);
+					errorln("Failed to create sprite from texture: {}", image_path);
 					return;
 				}
 			}
@@ -52,14 +52,14 @@ namespace stk
 						}
 						catch (...)
 						{
-							errorln("Failed to create sprite from texture: ", image_path);
+							errorln("Failed to create sprite from texture: {}", image_path);
 							m_textures.remove_at_unordered(m_textures.count() - 1);
 							return;
 						}
 					}
 					else
 					{
-						errorln("Failed to load image from file: ", image_path);
+						errorln("Failed to load image from file: {}", image_path);
 						m_textures.remove_at_unordered(m_textures.count() - 1);
 						return;
 					}
@@ -67,7 +67,7 @@ namespace stk
 				}
 				catch (...)
 				{
-					errorln("Failed to load texture: ", image_path);
+					errorln("Failed to load texture: {}", image_path);
 					return;
 				}
 			}
