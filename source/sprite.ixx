@@ -18,7 +18,7 @@ namespace stk
 	export class c_sprite_bank
 	{
 	public:
-		void make_sprite(c_hash id, std::string const& image_path, float x, float y)
+		sf::Sprite* make_sprite(c_hash id, std::string const& image_path, float x, float y)
 		{
 			assert(m_sprite_map.find(id) == m_sprite_map.end());
 			c_hash tex_id = image_path;
@@ -35,7 +35,7 @@ namespace stk
 				catch (...)
 				{
 					errorln("Failed to create sprite from texture: {}", image_path);
-					return;
+					return nullptr;
 				}
 			}
 			else
@@ -54,26 +54,27 @@ namespace stk
 						{
 							errorln("Failed to create sprite from texture: {}", image_path);
 							m_textures.remove_at_unordered(m_textures.count() - 1);
-							return;
+							return nullptr;
 						}
 					}
 					else
 					{
 						errorln("Failed to load image from file: {}", image_path);
 						m_textures.remove_at_unordered(m_textures.count() - 1);
-						return;
+						return nullptr;
 					}
 					m_texture_map[tex_id] = m_textures.count() - 1;
 				}
 				catch (...)
 				{
 					errorln("Failed to load texture: {}", image_path);
-					return;
+					return nullptr;
 				}
 			}
 
 			m_sprites[index].setPosition(x, y);
 			m_sprite_map[id] = index;
+			return &m_sprites[index];
 		}
 
 		sf::Sprite* get(c_hash id)
