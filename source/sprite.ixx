@@ -63,6 +63,7 @@ namespace stk
 						m_textures.remove_at_unordered(m_textures.count() - 1);
 						return;
 					}
+					m_texture_map[tex_id] = m_textures.count() - 1;
 				}
 				catch (...)
 				{
