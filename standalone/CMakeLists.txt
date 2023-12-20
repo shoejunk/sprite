@@ -27,7 +27,8 @@ CPMAddPackage(NAME sprite SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/..)
 CPMAddPackage(
 	NAME lunar_rescue_game
 	GITHUB_REPOSITORY shoejunk/lunar_rescue_game
-	VERSION 0.3.1
+	#VERSION 0.3.1
+	GIT_TAG main
 )
 
 # ---- Create standalone executable ----

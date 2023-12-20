@@ -42,20 +42,23 @@ CPMAddPackage(
 CPMAddPackage(
 	NAME hash
 	GITHUB_REPOSITORY shoejunk/hash
-	VERSION 6.0.1
+	#VERSION 6.0.1
+	GIT_TAG main
 )
 
 CPMAddPackage(
 	NAME ds
 	GITHUB_REPOSITORY shoejunk/ds
-	VERSION 2.1.1
+	#VERSION 2.1.1
+	GIT_TAG main
 )
 
 # Add package: shoejunk/log
 CPMAddPackage(
 	NAME log
 	GITHUB_REPOSITORY shoejunk/log
-	VERSION 1.3.0
+	#VERSION 1.3.0
+	GIT_TAG main
 )
 
 # ---- Add source files ----
