@@ -27,7 +27,7 @@ namespace stk
 			sf::Texture* tex;
 			if (tex_itr != m_texture_map.end())
 			{
-				tex = &m_textures[m_texture_map[tex_itr->second]];
+				tex = &m_textures[tex_itr->second];
 				try
 				{
 					m_sprites.emplace(*tex);
